@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import MovieCard from "./MovieCard";
+import MovieCard from "../MovieCard/MovieCard";
 
 function MovieSection({ title, url }) {
   const [movies, setMovies] = useState([]);

@@ -1,6 +1,6 @@
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import MovieSection from "./components/MovieSection";
+import MovieSection from "./components/MovieSection/MovieSection";
 import Footer from "./components/Footer/Footer";
 
 import { requests } from "./Services/api";
