@@ -10,6 +10,7 @@ function App() {
     <div className="bg-[#111] min-h-screen">
 
       <Header />
+      < Hero />
        <main className="pt-6">
 
         <MovieSection
