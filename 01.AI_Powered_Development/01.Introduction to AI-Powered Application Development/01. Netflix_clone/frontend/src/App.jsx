@@ -10,10 +10,7 @@ function App() {
     <div className="bg-[#111] min-h-screen">
 
       <Header />
-
-      <Hero />
-
-      <main className="pt-6">
+       <main className="pt-6">
 
         <MovieSection
           title="Trending Now"
@@ -56,7 +53,6 @@ function App() {
         />
 
       </main>
-
       <Footer />
 
     </div>
