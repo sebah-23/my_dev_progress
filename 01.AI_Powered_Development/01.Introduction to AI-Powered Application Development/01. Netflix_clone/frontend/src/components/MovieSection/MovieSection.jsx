@@ -11,7 +11,7 @@ function MovieSection({ title, url }) {
       .then((response) => response.json())
       .then((data) => {
         console.log(title, data);
-        setMovies(data.results || []);
+        setMovies(data.results );
       })
       .catch((error) => {
         console.error("Error fetching movies:", error);
@@ -63,7 +63,7 @@ function MovieSection({ title, url }) {
 
       <div
         ref={sliderRef}
-        className="flex gap-4 overflow-x-auto scrollbar-hide"
+        className="movie-row flex gap-4 overflow-x-auto"
       >
         {movies.map((movie) => (
           <MovieCard
