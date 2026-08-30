@@ -56,11 +56,11 @@ function Hero() {
 
           <div className="flex gap-4">
 
-            <button className="bg-white text-black px-6 py-3 rounded font-bold hover:bg-gray-300">
+            <button className="bg-white text-black px-6 py-3 cursor-pointer rounded font-bold hover:bg-gray-300">
               ▶ Play
             </button>
 
-            <button className="bg-gray-600/80 text-white px-6 py-3 rounded font-bold hover:bg-gray-600">
+            <button className="bg-gray-600/80 text-white px-6 py-3 cursor-pointer rounded font-bold hover:bg-gray-600">
               + My List
             </button>
 

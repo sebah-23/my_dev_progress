@@ -1,79 +1,85 @@
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
+
 function Footer() {
   return (
-    <footer className="bg-black text-gray-400 mt-12">
+    <footer className="bg-[#141414] text-gray-400 px-6 md:px-16 py-12">
+      
+      <div className="max-w-4xl mx-auto">
 
-      <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="flex gap-8 mb-6">
+          <FaFacebookF className="text-white text-xl cursor-pointer hover:text-gray-400" />
+          <FaInstagram className="text-white text-xl cursor-pointer hover:text-gray-400" />
+          <FaTwitter className="text-white text-xl cursor-pointer hover:text-gray-400" />
+          <FaYoutube className="text-white text-xl cursor-pointer hover:text-gray-400" />
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-4 gap-x-8 text-sm">
 
-        <h2 className="text-red-600 text-2xl font-bold mb-6">
-          NETFLIX
-        </h2>
+          <div className="flex flex-col gap-4">
+            <a href="#" className="hover:underline">
+              Audio Description
+            </a>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+            <a href="#" className="hover:underline">
+              Investor Relations
+            </a>
 
-          <div>
-            <h3 className="text-white font-semibold mb-4">
-              Company
-            </h3>
-
-            <p className="mb-2 hover:text-white cursor-pointer">
-              About
-            </p>
-
-            <p className="mb-2 hover:text-white cursor-pointer">
-              Careers
-            </p>
+            <a href="#" className="hover:underline">
+              Legal Notices
+            </a>
           </div>
 
-          <div>
-            <h3 className="text-white font-semibold mb-4">
-              Help
-            </h3>
+          <div className="flex flex-col gap-4">
+            <a href="#" className="hover:underline">
+              Help Centre
+            </a>
 
-            <p className="mb-2 hover:text-white cursor-pointer">
-              FAQ
-            </p>
+            <a href="#" className="hover:underline">
+              Jobs
+            </a>
 
-            <p className="mb-2 hover:text-white cursor-pointer">
-              Contact Us
-            </p>
+            <a href="#" className="hover:underline">
+              Cookie Preferences
+            </a>
+          </div>
+          <div className="flex flex-col gap-4">
+            <a href="#" className="hover:underline">
+              Gift Cards
+            </a>
+
+            <a href="#" className="hover:underline">
+              Terms of Use
+            </a>
+
+            <a href="#" className="hover:underline">
+              Corporate Information
+            </a>
           </div>
 
-          <div>
-            <h3 className="text-white font-semibold mb-4">
-              Legal
-            </h3>
+          <div className="flex flex-col gap-4">
+            <a href="#" className="hover:underline">
+              Media Centre
+            </a>
 
-            <p className="mb-2 hover:text-white cursor-pointer">
+            <a href="#" className="hover:underline">
               Privacy
-            </p>
+            </a>
 
-            <p className="mb-2 hover:text-white cursor-pointer">
-              Terms
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-white font-semibold mb-4">
-              Follow Us
-            </h3>
-
-            <p className="mb-2 hover:text-white cursor-pointer">
-              Facebook
-            </p>
-
-            <p className="mb-2 hover:text-white cursor-pointer">
-              Instagram
-            </p>
+            <a href="#" className="hover:underline">
+              Contact Us
+            </a>
           </div>
 
         </div>
-
-        <div className="border-t border-gray-800 mt-10 pt-6 text-center text-sm">
-          © 2026 Netflix Clone. Built for learning.
-        </div>
+        <p className="text-sm mt-8">
+          © 1997-2026 Netflix, Inc.
+        </p>
 
       </div>
-
     </footer>
   );
 }

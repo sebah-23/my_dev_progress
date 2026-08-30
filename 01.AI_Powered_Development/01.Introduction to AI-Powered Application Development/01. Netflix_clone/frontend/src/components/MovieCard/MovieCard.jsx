@@ -2,7 +2,7 @@ function MovieCard({ movie }) {
   const IMAGE_URL = "https://image.tmdb.org/t/p/w500";
 
   return (
-    <div className="min-w-[180px] md:min-w-[220px]">
+    <div className="min-w-[180px] md:min-w-[220px] transition-transform duration-300 hover:scale-110">
       <img
         src= {`${IMAGE_URL}${movie.poster_path}`}
         alt={movie.title}

@@ -1,1 +1,8 @@
 @import "tailwindcss";
+.movie-row {
+  scrollbar-width: none;
+}
+
+.movie-row::-webkit-scrollbar {
+  display: none;
+}
