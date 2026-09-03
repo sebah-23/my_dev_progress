@@ -1,8 +1,22 @@
 import express from "express";
 
-const app= express();
+import express from "express";
+import db from './db/db.config'
 
-app.listen (3000, ()=> {
+const app = express();
 
-    console.log('serverr is running on port http://localhost:3000');
-});
+async function startServer(){
+    try{
+  app.listen(8000,(err)=>{
+    if(err){
+      throw err
+    }
+    console.log('server is runninng on port http;//lovalhost:8000');
+    
+  })
+    }catch(err){
+      console.log('enter starting server:',err);
+      
+    }
+}
+    startServer()
