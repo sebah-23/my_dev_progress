@@ -1,4 +1,4 @@
-import express from "express";
+import 'dotenv/config';
 
 import express from "express";
 import db from './db/db.config'
@@ -9,7 +9,7 @@ async function startServer(){
     try{
   app.listen(8000,(err)=>{
     if(err){
-      throw err
+      throw err;
     }
     console.log('server is runninng on port http;//lovalhost:8000');
     
@@ -19,4 +19,4 @@ async function startServer(){
       
     }
 }
-    startServer()
+    startServer()  
