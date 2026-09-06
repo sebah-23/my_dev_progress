@@ -1,10 +1,15 @@
 import 'dotenv/config';
 
 import express from "express";
-import db from './db/db.config'
+import db from './db/db.config.js'
+import mainRouter from './src/api/chat/main_routes.js';
+import { errorHandler } from './src/middleware/error_handler.js';
 
 const app = express();
+app.use(express.json());
+app.use('/api', mainRouter);
 
+app.use(errorHandler);
 async function startServer(){
     try{
       const connection = await db.getConnection();
