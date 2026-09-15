@@ -1,18 +1,22 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import MovieSection from "./components/MovieSection/MovieSection";
 import Footer from "./components/Footer/Footer";
 
+import Movies from "./pages/Movies";
+
 import { requests } from "./Services/api";
 
-function App() {
+function Home() {
   return (
     <div className="bg-[#111] min-h-screen">
-
       <Header />
-      < Hero />
-       <main className="pt-6">
 
+      <Hero />
+
+      <main className="pt-6">
         <MovieSection
           title="Trending Now"
           url={requests.trending}
@@ -52,11 +56,26 @@ function App() {
           title="Documentaries"
           url={requests.documentaries}
         />
-
       </main>
-      <Footer />
 
+      <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+
+        {/* Home Page */}
+        <Route path="/" element={<Home />} />
+
+        {/* Movies Page */}
+        <Route path="/movies" element={<Movies />} />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
