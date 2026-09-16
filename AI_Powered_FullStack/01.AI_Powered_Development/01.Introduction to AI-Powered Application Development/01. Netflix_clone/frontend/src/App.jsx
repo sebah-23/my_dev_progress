@@ -6,6 +6,7 @@ import MovieSection from "./components/MovieSection/MovieSection";
 import Footer from "./components/Footer/Footer";
 
 import Movies from "./pages/Movies";
+import TVShows from "./pages/TvShows";
 
 import { requests } from "./Services/api";
 
@@ -73,6 +74,9 @@ function App() {
 
         {/* Movies Page */}
         <Route path="/movies" element={<Movies />} />
+
+        {/* TV Shows Page */}
+        <Route path="/tv-shows" element={<TVShows />} />
 
       </Routes>
     </BrowserRouter>
