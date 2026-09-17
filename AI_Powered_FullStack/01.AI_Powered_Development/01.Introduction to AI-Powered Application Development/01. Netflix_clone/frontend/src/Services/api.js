@@ -18,4 +18,22 @@ export const requests = {
   animation: `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=16`,
 
   documentaries: `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=99`,
+
+  tvPopular: `${BASE_URL}/tv/popular?api_key=${API_KEY}`,
+
+  tvAction: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=10759`,
+
+  tvComedy: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=35`,
+
+  tvDrama: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=18`,
+
+  tvAnimation: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=16`,
+
+  tvDocumentaries: `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=99`,
+
+  newMovies: `${BASE_URL}/movie/now_playing?api_key=${API_KEY}`,
+
+  upcomingMovies: `${BASE_URL}/movie/upcoming?api_key=${API_KEY}`,
+
+  popularTV: `${BASE_URL}/tv/popular?api_key=${API_KEY}`,
 };
