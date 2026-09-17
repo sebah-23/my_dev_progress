@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 
 import Movies from "./pages/Movies";
 import TVShows from "./pages/TvShows";
+import NewPopular from "./pages/NewPopular";
 
 import { requests } from "./Services/api";
 
@@ -77,6 +78,9 @@ function App() {
 
         {/* TV Shows Page */}
         <Route path="/tv-shows" element={<TVShows />} />
+
+          {/* New & Popular Page */}
+        <Route path="/new-popular" element={<NewPopular />} />
 
       </Routes>
     </BrowserRouter>
