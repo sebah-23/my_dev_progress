@@ -68,21 +68,27 @@ function Home() {
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
+     <Routes>
 
-        {/* Home Page */}
-        <Route path="/" element={<Home />} />
+  {/* Home Page */}
+  <Route path="/" element={<Home />} />
 
-        {/* Movies Page */}
-        <Route path="/movies" element={<Movies />} />
+  {/* Movies Page */}
+  <Route path="/movies" element={<Movies />} />
 
-        {/* TV Shows Page */}
-        <Route path="/tv-shows" element={<TVShows />} />
+  {/* TV Shows Page */}
+  <Route path="/tv-shows" element={<TVShows />} />
 
-          {/* New & Popular Page */}
-        <Route path="/new-popular" element={<NewPopular />} />
+  {/* Search Page */}
+  <Route path="/search" element={<Search />} />
 
-      </Routes>
+  {/* New & Popular Page */}
+  <Route path="/new-popular" element={<NewPopular />} />
+
+  {/* My List Page */}
+  <Route path="/my-list" element={<MyList />} />
+
+</Routes>
     </BrowserRouter>
   );
 }
