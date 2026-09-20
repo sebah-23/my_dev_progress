@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import Movies from "./pages/Movies";
 import TVShows from "./pages/TvShows";
 import NewPopular from "./pages/NewPopular";
+import MovieDetails from "./pages/MovieDetails";
 
 import { requests } from "./Services/api";
 
@@ -87,6 +88,9 @@ function App() {
 
   {/* My List Page */}
   <Route path="/my-list" element={<MyList />} />
+
+  {/* Movie Details Page */}
+  <Route path="/movie/:id" element={<MovieDetails />} />
 
 </Routes>
     </BrowserRouter>
