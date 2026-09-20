@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function MovieCard({ movie }) {
   const IMAGE_URL = "https://image.tmdb.org/t/p/w500";
@@ -30,11 +31,18 @@ function MovieCard({ movie }) {
   return (
     <div className="min-w-[180px] md:min-w-[220px] relative group">
 
-      <img
-        src={`${IMAGE_URL}${movie.poster_path}`}
-        alt={movie.title || movie.name}
-        className="w-full h-[270px] object-cover rounded-lg"
-      />
+      {/* Movie Details Link */}
+      <Link to={`/movie/${movie.id}`}>
+        <img
+          src={`${IMAGE_URL}${movie.poster_path}`}
+          alt={movie.title || movie.name}
+          className="w-full h-[270px] object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+        />
+
+        <h3 className="text-white font-semibold mt-2 truncate">
+          {movie.title || movie.name}
+        </h3>
+      </Link>
 
       {/* Add to My List Button */}
       <button
@@ -44,10 +52,6 @@ function MovieCard({ movie }) {
       >
         {saved ? "✓" : "+"}
       </button>
-
-      <h3 className="text-white font-semibold mt-2 truncate">
-        {movie.title || movie.name}
-      </h3>
 
     </div>
   );
