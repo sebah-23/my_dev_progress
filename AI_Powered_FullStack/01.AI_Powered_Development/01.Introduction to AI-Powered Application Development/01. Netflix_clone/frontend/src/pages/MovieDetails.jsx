@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams ,useNavigate} from "react-router-dom";
+
 
 function MovieDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [movie, setMovie] = useState(null);
 
@@ -55,7 +57,9 @@ function MovieDetails() {
               alt={movie.title}
               className="w-[250px] rounded-lg shadow-lg"
             />
-
+           <button onClick={() => navigate(-1)} className="mb-6 bg-white/20 hover:bg-white/30 text-white px-5 py-2 rounded" >
+            ← Back
+           </button>
             {/* Movie Information */}
             <div className="max-w-2xl">
 
