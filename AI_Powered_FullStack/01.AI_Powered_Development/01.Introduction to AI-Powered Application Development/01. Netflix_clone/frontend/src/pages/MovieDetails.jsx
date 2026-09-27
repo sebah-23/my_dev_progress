@@ -66,6 +66,16 @@ function MovieDetails() {
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 {movie.title}
               </h1>
+              <div className="flex flex-wrap gap-2 mb-4">
+            {movie.genres?.map((genre) => (
+           <span
+             key={genre.id}
+             className="bg-white/20 px-3 py-1 rounded-full text-sm"
+              >
+              {genre.name}
+             </span>
+              ))}
+            </div>  
 
               <p className="text-gray-300 mb-4">
                 {movie.overview}
