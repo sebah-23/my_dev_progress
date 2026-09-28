@@ -81,6 +81,11 @@ function MovieDetails() {
                 {movie.overview}
               </p>
 
+            <p>
+           <span className="font-bold text-white">Year:</span>{" "}
+              {movie.release_date?.slice(0, 4)}
+                </p>
+                
               <div className="space-y-2 text-gray-300">
                 <p>
                   <span className="font-bold text-white">
