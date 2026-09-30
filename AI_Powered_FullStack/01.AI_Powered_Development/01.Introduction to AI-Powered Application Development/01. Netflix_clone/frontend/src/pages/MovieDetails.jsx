@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import { useParams ,useNavigate} from "react-router-dom";
-
+import { useParams, useNavigate } from "react-router-dom";
 
 function MovieDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
 
   const [movie, setMovie] = useState(null);
+  const [trailer, setTrailer] = useState(null);
 
   const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
+  // Get movie details
   useEffect(() => {
     fetch(
       `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`
@@ -20,6 +21,26 @@ function MovieDetails() {
       })
       .catch((error) => {
         console.error("Error fetching movie details:", error);
+      });
+  }, [id, API_KEY]);
+
+  // Get movie trailer
+  useEffect(() => {
+    fetch(
+      `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        const youtubeTrailer = data.results?.find(
+          (video) =>
+            video.site === "YouTube" &&
+            video.type === "Trailer"
+        );
+
+        setTrailer(youtubeTrailer);
+      })
+      .catch((error) => {
+        console.error("Error fetching trailer:", error);
       });
   }, [id, API_KEY]);
 
@@ -44,49 +65,67 @@ function MovieDetails() {
           backgroundImage: `url(${BACKDROP_URL}${movie.backdrop_path})`,
         }}
       >
+
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/70"></div>
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 py-20">
+
+          {/* Back Button */}
+          <button
+            onClick={() => navigate(-1)}
+            className="mb-6 bg-white/20 hover:bg-white/30 text-white px-5 py-2 rounded"
+          >
+            ← Back
+          </button>
+
           <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
 
             {/* Movie Poster */}
             <img
-              src={`url(${IMAGE_URL}${movie.poster_path})`}
+              src={`${IMAGE_URL}${movie.poster_path}`}
               alt={movie.title}
               className="w-[250px] rounded-lg shadow-lg"
             />
-           <button onClick={() => navigate(-1)} className="mb-6 bg-white/20 hover:bg-white/30 text-white px-5 py-2 rounded" >
-            ← Back
-           </button>
+
             {/* Movie Information */}
             <div className="max-w-2xl">
 
+              {/* Title */}
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 {movie.title}
               </h1>
-              <div className="flex flex-wrap gap-2 mb-4">
-            {movie.genres?.map((genre) => (
-           <span
-             key={genre.id}
-             className="bg-white/20 px-3 py-1 rounded-full text-sm"
-              >
-              {genre.name}
-             </span>
-              ))}
-            </div>  
 
+              {/* Genres */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {movie.genres?.map((genre) => (
+                  <span
+                    key={genre.id}
+                    className="bg-white/20 px-3 py-1 rounded-full text-sm"
+                  >
+                    {genre.name}
+                  </span>
+                ))}
+              </div>
+
+              {/* Overview */}
               <p className="text-gray-300 mb-4">
                 {movie.overview}
               </p>
 
-            <p>
-           <span className="font-bold text-white">Year:</span>{" "}
-              {movie.release_date?.slice(0, 4)}
-                </p>
-                
+              {/* Movie Information */}
               <div className="space-y-2 text-gray-300">
+
+                {/* Year */}
+                <p>
+                  <span className="font-bold text-white">
+                    Year:
+                  </span>{" "}
+                  {movie.release_date?.slice(0, 4)}
+                </p>
+
+                {/* Release Date */}
                 <p>
                   <span className="font-bold text-white">
                     Release Date:
@@ -94,30 +133,49 @@ function MovieDetails() {
                   {movie.release_date}
                 </p>
 
+                {/* Rating */}
                 <p>
                   <span className="font-bold text-white">
                     Rating:
                   </span>{" "}
-                  ⭐ {movie.vote_average?.toFixed(1)}
+                  ⭐ {movie.vote_average?.toFixed(1)} / 10
                 </p>
 
+                {/* Runtime */}
                 <p>
                   <span className="font-bold text-white">
                     Runtime:
                   </span>{" "}
                   {movie.runtime} minutes
                 </p>
+
               </div>
 
               {/* Buttons */}
-              <div className="flex gap-4 mt-6">
+              <div className="flex flex-wrap gap-4 mt-6">
+
+                {/* Play Button */}
                 <button className="bg-white text-black px-6 py-3 rounded font-bold hover:bg-gray-300">
                   ▶ Play
                 </button>
 
+                {/* Trailer Button */}
+                {trailer && (
+                  <a
+                    href={`https://www.youtube.com/watch?v=${trailer.key}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-red-600 text-white px-6 py-3 rounded font-bold hover:bg-red-700"
+                  >
+                    ▶ Watch Trailer
+                  </a>
+                )}
+
+                {/* My List Button */}
                 <button className="bg-gray-600/80 text-white px-6 py-3 rounded font-bold hover:bg-gray-600">
                   + My List
                 </button>
+
               </div>
 
             </div>
