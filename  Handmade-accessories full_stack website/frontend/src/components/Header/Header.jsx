@@ -19,7 +19,10 @@ function Header () {
 
             </nav>
 
-           <button onClick={()=> setMenuOpen(!menuOpen)} className="md:hidden text-4xl"> ☰ </button>
+           <button onClick={()=> setMenuOpen(!menuOpen)} className="md:hidden text-4xl"> 
+            
+            {menuOpen ? "" : "☰"}
+             </button>
 
            {menuOpen && (
                <nav className="md:hidden flex flex-col items-start gap-4 ">
