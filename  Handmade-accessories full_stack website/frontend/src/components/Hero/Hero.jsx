@@ -3,15 +3,15 @@ import her0_video from '../../assets/images/Hero-video.MOV'
 function Hero (){
     return (
     
-         <section>
+         <section className="relative h-screen">
          
-         <video src={her0_video} autoPlay loop muted playsInline></video>
+         <video src={her0_video} autoPlay loop muted playsInline className= "inset-0 w-full h-full object-cover absolute"></video>
 
-         <div>
-           <h1>unique Accessories, made for you</h1>
-           <p>  Discover beautiful handmade accessories designed
+         <div className= " relative z-10 h-full flex flex-col item-center justify-center">
+           <h1 className="text-5xl font-bold ">unique Accessories, made for you</h1>
+           <p className=" text-lg">  Discover beautiful handmade accessories designed
               to add a special touch to your style.</p>
-               <button>Shop Collection</button>
+               <button className="bg-[#F4A261] text-white px-6 py-3 rounded-lg hover:bg-[#E76F51] transition">Shop Collection</button>
          </div>
          </section>
     )
