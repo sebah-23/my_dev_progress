@@ -1,14 +1,19 @@
 
 import './App.css'
-import Header from './components/Header/Header'
-import Hero from './components/Hero/Hero'
+import Home from "../src/pages/Home"
+
 
 function App() {
   return (
-    <>
-     <Header />
-      <Hero />
-    </>
+   <BrowserRouter>
+     <Routes>
+
+  {/* Home Page */}
+  <Route path="/" element={<Home />} />
+
+
+  </Routes>
+    </BrowserRouter>
   )
 }
 
