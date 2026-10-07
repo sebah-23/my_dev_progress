@@ -11,9 +11,10 @@ function Hero (){
            <h1 className="text-5xl font-bold ">unique Accessories, made for you</h1>
            <p className=" text-lg">  Discover beautiful handmade accessories designed
               to add a special touch to your style.</p>
-               <button className="bg-[#F4A261] text-white px-6 py-3 rounded-lg hover:bg-[#E76F51] transition">Shop Collection</button>
+               <button className="bg-pink-300 text-white px-6 py-3 rounded-lg hover:bg-pink-200 transition">Shop Collection</button>
          </div>
          </section>
     )
 
 }
+export default Hero;
