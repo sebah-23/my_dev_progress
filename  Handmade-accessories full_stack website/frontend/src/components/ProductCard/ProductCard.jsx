@@ -2,7 +2,7 @@ import product from '../../data/products.js';
 
 function ProductCard({product}){
     return(
-      <div>
+      <div className='bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition'>
        <img src={product.image} alt={product.name}  className="w-full h-52 sm:h-60 md:h-64 object-cover"/>
        <div className="p-3 sm:p-4">
         <h3 className="text-base sm:text-lg font-semibold text-gray-800 "> {product.name} </h3>
