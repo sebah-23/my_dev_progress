@@ -9,7 +9,7 @@ function Recomm() {
         
       </div>
       
-      <ProductGrid />
+      <ProductGrid products={products.slice(0, 4)} />
     </section>
   );
 }
