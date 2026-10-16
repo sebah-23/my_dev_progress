@@ -1,6 +1,10 @@
 import ProductGrid from "../../../components/ProductGrid/ProductGrid";
+import products from "../../../data/products.js";
 
 function WhatsNew() {
+   
+  const newProducts = products.slice(-4).reverse(); // Get the first 4 products
+
   return (
     <section className="px-4 py-12 sm:px-6 lg:px-12 bg-gray-100">
       <div className="mb-8 mx-auto px-4">
@@ -9,7 +13,7 @@ function WhatsNew() {
         
       </div>
       
-      <ProductGrid />
+      <ProductGrid products={newProducts} />
     </section>
   );
 }
