@@ -1,4 +1,5 @@
 import ProductGrid from "../../../components/ProductGrid/ProductGrid";
+import products from "../../../data/products.js";
 
 function Popular() {
   return (
@@ -9,7 +10,7 @@ function Popular() {
         
       </div>
       
-      <ProductGrid />
+      <ProductGrid products={products.slice(0, 4)} />
     </section>
   );
 }
