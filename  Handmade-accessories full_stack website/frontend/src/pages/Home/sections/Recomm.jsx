@@ -1,5 +1,5 @@
 import ProductGrid from "../../../components/ProductGrid/ProductGrid";
-
+import products from "../../../data/products.js";
 function Recomm() {
   return (
     <section className="px-4 py-12 sm:px-6 lg:px-12 bg-gray-100">
