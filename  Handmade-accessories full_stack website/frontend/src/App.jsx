@@ -1,6 +1,7 @@
 
 import './App.css'
 import Home from "../src/pages/Home"
+import Products from '../src/pages/Products'
 
 
 function App() {
@@ -10,6 +11,11 @@ function App() {
 
   {/* Home Page */}
   <Route path="/" element={<Home />} />
+
+  {/* Product Page */}
+  <Route path ='/Products' element = {<Products />} />
+
+  
 
 
   </Routes>
