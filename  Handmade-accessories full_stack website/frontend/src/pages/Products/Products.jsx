@@ -2,6 +2,7 @@ import Header from "../../components/Header/Header";
 import PhoneCharmSection from "./Sections/PhoneCharmSection";
 import KeyChainSection from "./Sections/keyChainSection";
 import braceletSection from "./Sections/braceletSection";
+import Footer from "../../components/Footer/footer.jsx";
 
 function Products() {
   return (
@@ -14,7 +15,7 @@ function Products() {
         <p className="text-sm text-gray-600 mt-2 sm:text-base">Explore our wide range of handmade accessories!</p>
       </div>
 
-      {/* Add your product grid or list component here */}
+      {/* Add product grid  */}
 
       <PhoneCharmSection />
       <braceletSection />
@@ -22,6 +23,8 @@ function Products() {
 
 
     </main>
+
+    <Footer />
     </>
   );
 }
