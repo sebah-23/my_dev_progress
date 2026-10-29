@@ -17,7 +17,20 @@ function ProductDetails() {
           </div>
         </div>
 
-        {/* Product information */}
+    <div>
+        <h1>Product Name</h1>
+
+        <p>Product price ETB</p>
+
+     <div>
+        <span>★★★★★</span>
+        <span>(Rating | Reviews)</span>
+     </div>
+
+    <button type="button">
+         Order Now
+    </button>
+</div>
 
         {/* Product description */}
 
