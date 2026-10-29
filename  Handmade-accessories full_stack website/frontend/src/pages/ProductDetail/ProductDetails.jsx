@@ -1,27 +1,32 @@
 
-
-
-function ProductDetail(){
-    return(
+function ProductDetails() {
+  return (
     <main>
-   
-     <section>
-     <div>
-        
-     </div>  
+      <section>
+        {/* Product image gallery */}
+        <div>
+          <div>
+            <img
+              src=""
+              alt="Product"
+            />
+          </div>
 
-  
+          <div>
+            {/* Additional product thumbnails */}
+          </div>
+        </div>
 
-     </section>
+        {/* Product information */}
 
+        {/* Product description */}
 
+        {/* Color options */}
 
-
-
-
+        {/* Customer reviews */}
+      </section>
     </main>
-
-    )
-
-
+  );
 }
+
+export default ProductDetails;
