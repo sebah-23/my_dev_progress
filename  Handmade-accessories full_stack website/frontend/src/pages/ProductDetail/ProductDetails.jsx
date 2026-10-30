@@ -34,6 +34,22 @@ function ProductDetails() {
 
         {/* Product description */}
 
+    
+<div>
+  <h2>Description</h2>
+
+  <p>
+    Product description will appear here.
+  </p>
+
+  <ul>
+    <li>Materials</li>
+    <li>Size and length</li>
+    <li>Care instructions</li>
+  </ul>
+</div>
+
+
         {/* Color options */}
 
         {/* Customer reviews */}
