@@ -75,6 +75,20 @@ function ProductDetails() {
 
 
         {/* Customer reviews */}
+
+        
+<div>
+  <h2>Customer Reviews</h2>
+
+  <button type="button">
+    View all reviews
+  </button>
+
+  <div>
+    <p>No reviews yet.</p>
+  </div>
+</div>
+
       </section>
     </main>
   );
