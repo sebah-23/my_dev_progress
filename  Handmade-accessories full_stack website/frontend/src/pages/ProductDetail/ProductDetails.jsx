@@ -52,6 +52,28 @@ function ProductDetails() {
 
         {/* Color options */}
 
+        
+<div>
+  <h2>Color:</h2>
+
+  <div>
+    {[
+      { name: "Purple", className: "bg-purple-500" },
+      { name: "Pink", className: "bg-pink-400" },
+      { name: "White", className: "bg-white" },
+      { name: "Black", className: "bg-gray-950" },
+    ].map((color) => (
+      <button
+        key={color.name}
+        type="button"
+        aria-label={color.name}
+        className={`h-8 w-8 rounded-full border ${color.className}`}
+      />
+    ))}
+  </div>
+</div>
+
+
         {/* Customer reviews */}
       </section>
     </main>
