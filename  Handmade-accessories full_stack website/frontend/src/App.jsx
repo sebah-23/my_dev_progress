@@ -2,6 +2,7 @@
 import './App.css'
 import Home from "../src/pages/Home"
 import Products from '../src/pages/Products'
+import ProductDetails from "./pages/ProductDetails/ProductDetails";
 
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
 
   {/* Product Page */}
   <Route path ='/Products' element = {<Products />} />
+
+  <Route path="/products/:id" element={<ProductDetails />} />
 
   
 
