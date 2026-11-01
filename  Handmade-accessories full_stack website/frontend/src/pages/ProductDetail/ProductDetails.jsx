@@ -1,5 +1,20 @@
-
+import { useParams } from "react-router-dom";
+import products from "../../data/products";
 function ProductDetails() {
+ const { id } = useParams();
+
+   const product = products.find(
+    (item) => String(item.id) === id
+  );
+
+  if (!product) {
+    return (
+      <main>
+        <h1>Product not found</h1>
+        <p>Sorry, we couldn't find that product.</p>
+      </main>
+    );
+  }
   return (
     <main>
       <section>
@@ -93,5 +108,6 @@ function ProductDetails() {
     </main>
   );
 }
+
 
 export default ProductDetails;
