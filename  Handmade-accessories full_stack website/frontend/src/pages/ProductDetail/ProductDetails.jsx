@@ -9,21 +9,22 @@ function ProductDetails() {
 
   if (!product) {
     return (
-      <main>
-        <h1>Product not found</h1>
-        <p>Sorry, we couldn't find that product.</p>
+      <main className="min-h-screen bg-pink-50 px-4 py-12">
+        <h1 className="mx-auto max-w-3xl rounded-xl bg-white p-6">Product not found</h1>
+        <p  className="mt-2 text-gray-600">Sorry, we couldn't find that product.</p>
       </main>
     );
   }
   return (
-    <main>
+    <main className="min-h-screen bg-pink-50 px-4 py-6">
       <section>
         {/* Product image gallery */}
-        <div>
-          <div>
+        <div className="mx-auto max-w-3xl space-y-4">
+          <div className="overflow-hidden rounded-xl">
             <img
               src=""
               alt="Product"
+               className="h-72 w-full object-cover"
             />
           </div>
 
