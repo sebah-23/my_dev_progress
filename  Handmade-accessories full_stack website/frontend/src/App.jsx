@@ -1,8 +1,8 @@
 
 import './App.css'
-import Home from "../src/pages/Home"
-import Products from '../src/pages/Products'
-import ProductDetails from "./pages/ProductDetails/ProductDetails";
+import Home from "../src/pages/Home/Home"
+import Products from '../src/pages/Products/Products'
+import ProductDetails from "./pages/ProductDetail/ProductDetails";
 
 
 function App() {

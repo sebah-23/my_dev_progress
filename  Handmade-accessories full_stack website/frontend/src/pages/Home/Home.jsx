@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 import WhatsNew from "./sections/WhatsNew";
 import Popular from "./sections/Popular";
 import Recomm from "./sections/Recomm";
-import Footer from "../../components/Footer"
+import Footer from "../../components/Footer/Footer"
 
 function Home(){
     return (

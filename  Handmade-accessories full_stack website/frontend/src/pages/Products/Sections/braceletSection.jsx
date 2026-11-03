@@ -1,5 +1,5 @@
 import products from  "../../../data/products";
-import productGrid from "../../../components/ProductGrid"
+import productGrid from "../../../components/ProductGrid/ProductGrid"
 
 function braceletSection(){
 
