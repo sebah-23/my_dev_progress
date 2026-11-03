@@ -1,5 +1,5 @@
 import products from "../../data/products.js";
-import ProductCard from "../ProductCard/ProductCard.js";
+import ProductCard from "../ProductCard/ProductCard.jsx";
 
 function ProductGrid() {
   return (
