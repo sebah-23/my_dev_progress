@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import products from "../../data/products";
 function ProductDetails() {
  const { id } = useParams();
@@ -18,6 +18,30 @@ function ProductDetails() {
   return (
     <main className="min-h-screen bg-pink-50 px-4 py-6">
       <section>
+<nav className="flex items-center gap-2 text-sm text-gray-500">
+  <Link
+    to="/"
+    className="transition hover:text-pink-600"
+  >
+    Home
+  </Link>
+
+  <span>/</span>
+
+  <Link
+    to="/products"
+    className="transition hover:text-pink-600"
+  >
+    Products
+  </Link>
+
+  <span>/</span>
+
+  <span className="font-medium text-gray-800">
+    {product.name}
+  </span>
+</nav>
+
         {/* Product image gallery */}
         <div className="mx-auto max-w-3xl space-y-4">
           <div className="overflow-hidden rounded-xl">
