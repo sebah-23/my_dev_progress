@@ -42,6 +42,13 @@ function ProductDetails() {
   </span>
 </nav>
 
+    <Link
+  to="/products"
+  className="inline-flex items-center gap-2 text-sm font-medium text-gray-600 transition hover:text-pink-600"
+    >
+  ← Back to Products
+    </Link>
+
         {/* Product image gallery */}
         <div className="mx-auto max-w-3xl space-y-4">
           <div className="overflow-hidden rounded-xl">
