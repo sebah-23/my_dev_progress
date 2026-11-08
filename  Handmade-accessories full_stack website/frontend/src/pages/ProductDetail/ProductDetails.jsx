@@ -114,7 +114,7 @@ function ProductDetails() {
         key={color.name}
         type="button"
         aria-label={color.name}
-        className={`h-8 w-8 rounded-full border ${color.className}`}
+        // className={h-8 w-8 rounded-full border ${color.className}}
       />
     ))}
   </div>
