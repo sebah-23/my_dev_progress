@@ -10,7 +10,7 @@ function CustomOrder() {
             Made Just For You
           </p>
 
-          <h1 className="mb-3 text-2xl font-semibold text-gray-800 sm:text-3xl md:text-4xl">
+          <h1 className="w-full rounded bg-gray-800 p-3 text-sm text-white transition-colors hover:bg-amber-700 sm:text-base">
             Create Your Custom Piece
           </h1>
 
