@@ -38,10 +38,62 @@ function Contact() {
   </div>
 </section>
 
-        {/* Contact Form */}
-        <section>
-          <h2>Send Us a Message</h2>
-        </section>
+       
+{/* Contact Form */}
+<section>
+  <h2>Send Us a Message</h2>
+
+  <form>
+    <div>
+      <label htmlFor="name">Full Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your full name"
+        required
+      />
+    </div>
+
+    <div>
+      <label htmlFor="email">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      />
+    </div>
+
+    <div>
+      <label htmlFor="subject">Subject</label>
+      <input
+        type="text"
+        id="subject"
+        name="subject"
+        placeholder="Enter message subject"
+        required
+      />
+    </div>
+
+    <div>
+      <label htmlFor="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="Write your message..."
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit">
+      Send Message
+    </button>
+  </form>
+</section>
+
 
       </div>
     </main>
